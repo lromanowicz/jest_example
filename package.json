@@ -1,0 +1,49 @@
+{
+  "name": "jest-example",
+  "version": "1.0.0",
+  "description": "Example tests using Jest",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest",
+    "test:coverage": "jest --coverage"
+  },
+  "keywords": [
+    "jest",
+    "npm",
+    "testing",
+    "testarmy"
+  ],
+  "author": "Łukasz Romanowicz",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "@babel/preset-typescript": "^7.3.3",
+    "@types/jest": "^24.0.9",
+    "jest": "^24.1.0",
+    "jest-watch-typeahead": "^0.2.1"
+  },
+  "babel": {
+    "presets": [
+      "@babel/preset-env",
+      "@babel/preset-typescript"
+    ]
+  },
+  "jest": {
+    "testMatch": [
+      "**/__tests__/**/*.+(js|ts|tsx)"
+    ],
+    "moduleFileExtensions": [
+      "js",
+      "ts",
+      "tsx"
+    ],
+    "transform": {
+      "\\.(js|ts|tsx)": "babel-jest"
+    },
+    "watchPlugins": [
+      "jest-watch-typeahead/filename",
+      "jest-watch-typeahead/testname"
+    ]
+  }
+}
